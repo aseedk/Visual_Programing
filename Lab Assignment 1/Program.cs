@@ -5,444 +5,6 @@ namespace Lab_Assignment_1
 {
     internal static class Program
     {
-        private static void StaticArrayMainMenu()
-        {
-            Console.WriteLine("Welcome To Static Array Student Information Center !!!");
-            int studentCount;
-            while (true)
-                try
-                {
-                    Console.Write("Enter The Number Of Student You Want To Add: ");
-                    studentCount = int.Parse(Console.ReadLine() ?? string.Empty);
-                    if (studentCount >= 1) break;
-
-                    Console.WriteLine("Enter A Positive or Non-Zero Number");
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-                catch (DivideByZeroException)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-
-            var students = new Student[studentCount];
-            for (var i = 0; i < studentCount; i++)
-            {
-                Console.Write($"Do You Want to Add Details of Student No: {i + 1}?\n Enter YES To Add Details\n" +
-                              " Enter NO To Add Details\n Enter Your Choice: ");
-                var noInfoCheck = Console.ReadLine();
-                if (noInfoCheck != null)
-                    switch (noInfoCheck.ToLower())
-                    {
-                        case "yes":
-                            students[i] = new Student(false);
-                            break;
-                        case "no":
-                            students[i] = new Student(true);
-                            break;
-                        default:
-                            students[i] = new Student(true);
-                            break;
-                    }
-            }
-
-            int choice;
-            Console.WriteLine(" Welcome To Static Array Student Information Center !!!");
-            while (true)
-                try
-                {
-                    Console.Write(" Enter 1 To Display Student Details\n Enter 2 To Delete Student Details\n" +
-                                  " Enter 3 To Update Student Details\n Enter 4 To Display All Student Details\n" +
-                                  " Enter 0 To Exit\n" + " Enter Your Choice: ");
-                    choice = int.Parse(Console.ReadLine() ?? string.Empty);
-                    if (choice >= 0 && choice <= 4) break;
-
-                    Console.WriteLine("Enter A Non-Zero Number");
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-                catch (DivideByZeroException)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-
-            if (choice == 0)
-                Console.WriteLine("Exiting Static Array Student Information Center !!!");
-            while (choice != 0)
-            {
-                int index;
-                switch (choice)
-                {
-                    case 1:
-                        while (true)
-                            try
-                            {
-                                Console.Write("Enter Student Index: ");
-                                index = int.Parse(Console.ReadLine() ?? string.Empty);
-                                if (index > 0 && index <= students.Length) break;
-
-                                Console.WriteLine("Enter A Correct Index !!! ");
-                            }
-                            catch (FormatException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (DivideByZeroException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (Exception)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-
-                        Console.WriteLine($"Student No: {index}");
-                        students[index - 1].display_Student_Details();
-                        break;
-                    case 2:
-                        while (true)
-                            try
-                            {
-                                Console.Write("Enter Student Index: ");
-                                index = int.Parse(Console.ReadLine() ?? string.Empty);
-                                if (index > 0 && index <= students.Length) break;
-
-                                Console.WriteLine("Enter A Correct Index !!! ");
-                            }
-                            catch (FormatException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (DivideByZeroException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (Exception)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-
-                        Console.WriteLine($"Student No: {index}");
-                        students[index - 1].delete_Student();
-                        break;
-                    case 3:
-                        while (true)
-                            try
-                            {
-                                Console.Write("Enter Student Index: ");
-                                index = int.Parse(Console.ReadLine() ?? string.Empty);
-                                if (index > 0 && index <= students.Length) break;
-
-                                Console.WriteLine("Enter A Correct Index !!! ");
-                            }
-                            catch (FormatException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (DivideByZeroException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (Exception)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-
-                        Console.WriteLine($"Student No: {index}");
-                        students[index - 1].update_student();
-                        break;
-                    case 4:
-                        for (var i = 0; i <= students.Length; i++)
-                        {
-                            Console.WriteLine($"Student No: {i + 1}");
-                            students[i].display_Student_Details();
-                        }
-
-                        break;
-                    default:
-                        Console.WriteLine("Enter A Correct Option!!!");
-                        break;
-                }
-
-                Console.WriteLine(" Welcome To Static Array Student Information Center !!!");
-                while (true)
-                    try
-                    {
-                        Console.Write(" Enter 1 To Display Student Details\n Enter 2 To Delete Student Details\n" +
-                                      " Enter 3 To Update Student Details\n Enter 4 To Display All Student Details\n" +
-                                      " Enter 0 To Exit\n" + " Enter Your Choice: ");
-                        choice = int.Parse(Console.ReadLine() ?? string.Empty);
-                        if (choice >= 0 && choice <= 4) break;
-                        Console.WriteLine("Enter A Non-Zero Number");
-                    }
-                    catch (FormatException)
-                    {
-                        Console.WriteLine("Enter A Number!!!");
-                    }
-                    catch (DivideByZeroException)
-                    {
-                        Console.WriteLine("Enter A Number!!!");
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("Enter A Number!!!");
-                    }
-
-                if (choice != 0) continue;
-                Console.WriteLine("Exiting Static Array Student Information Center !!!");
-                break;
-            }
-        }
-
-        private static void DynamicArrayMainMenu()
-        {
-            Console.WriteLine("Welcome To Dynamic Array Student Information Center !!!");
-            int studentCount;
-            while (true)
-                try
-                {
-                    Console.Write("Enter The Number Of Student You Want To Add: ");
-                    studentCount = int.Parse(Console.ReadLine() ?? string.Empty);
-                    if (studentCount >= 1) break;
-                    Console.WriteLine("Enter A Positive or Non-Zero Number");
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-                catch (DivideByZeroException)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-
-            var students = new List<Student>();
-            for (var i = 0; i < studentCount; i++)
-            {
-                Console.Write($"Do You Want to Add Details of Student No: {i + 1}?\n Enter YES To Add Details\n" +
-                              " Enter NO To Add Details\n Enter Your Choice: ");
-                var noInfoCheck = Console.ReadLine();
-                if (noInfoCheck != null)
-                    switch (noInfoCheck.ToLower())
-                    {
-                        case "yes":
-                            students.Add(new Student(false));
-                            break;
-                        case "no":
-                            students.Add(new Student(true));
-                            break;
-                        default:
-                            students.Add(new Student(true));
-                            break;
-                    }
-            }
-
-            Console.WriteLine(" Welcome To Dynamic Array Student Information Center !!!");
-            int choice;
-            while (true)
-                try
-                {
-                    Console.Write(" Enter 1 To Display Student Details\n Enter 2 To Delete Student Details\n" +
-                                  " Enter 3 To Update Student Details\n Enter 4 To Display All Student Details\n" +
-                                  " Enter 5 To Add New Student Details\n" +
-                                  " Enter 0 To Exit\n" + " Enter Your Choice: ");
-                    choice = int.Parse(Console.ReadLine() ?? string.Empty);
-                    if (choice >= 0 && choice <= 5) break;
-
-                    Console.WriteLine("Enter A Positive Number");
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-                catch (DivideByZeroException)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Enter A Number!!!");
-                }
-
-            if (choice == 0)
-                Console.WriteLine("Exiting Dynamic Array Student Information Center !!!");
-            while (choice != 0)
-            {
-                int index;
-                switch (choice)
-                {
-                    case 1:
-                        while (true)
-                            try
-                            {
-                                Console.Write("Enter Student Index: ");
-                                index = int.Parse(Console.ReadLine() ?? string.Empty);
-                                if (index > 0 && index < students.Count) break;
-
-                                Console.WriteLine("Enter A Correct Index !!! ");
-                            }
-                            catch (FormatException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (DivideByZeroException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (Exception)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-
-                        Console.WriteLine($"Student No: {index}");
-                        students[index - 1].display_Student_Details();
-                        break;
-                    case 2:
-                        while (true)
-                            try
-                            {
-                                Console.Write("Enter Student Index: ");
-                                index = int.Parse(Console.ReadLine() ?? string.Empty);
-                                if (index > 0 && index <= students.Count) break;
-
-                                Console.WriteLine("Enter A Correct Index !!! ");
-                            }
-                            catch (FormatException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (DivideByZeroException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (Exception)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-
-                        Console.WriteLine($"Student No: {index}");
-                        students[index - 1].delete_Student();
-                        break;
-                    case 3:
-                        while (true)
-                            try
-                            {
-                                Console.Write("Enter Student Index: ");
-                                index = int.Parse(Console.ReadLine() ?? string.Empty);
-                                if (index > 0 && index <= students.Count) break;
-
-                                Console.WriteLine("Enter A Correct Index !!! ");
-                            }
-                            catch (FormatException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (DivideByZeroException)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-                            catch (Exception)
-                            {
-                                Console.WriteLine("Enter A Number!!!");
-                            }
-
-                        Console.WriteLine($"Student No: {index}");
-                        students[index - 1].update_student();
-                        break;
-                    case 4:
-                        for (var i = 0; i <= students.Count; i++)
-                        {
-                            Console.WriteLine($"Student No: {i + 1}");
-                            students[i].display_Student_Details();
-                        }
-
-                        break;
-                    case 5:
-                        Console.Write(
-                            $"Do You Want to Add Details of Student No: {studentCount + 1}?\n Enter YES To Add Details\n" +
-                            " Enter NO To Add Details\n Enter Your Choice: ");
-                        var noInfoCheck = Console.ReadLine();
-                        if (noInfoCheck != null)
-                            switch (noInfoCheck.ToLower())
-                            {
-                                case "yes":
-                                    students.Add(new Student(false));
-                                    break;
-                                case "no":
-                                    students.Add(new Student(true));
-                                    break;
-                                default:
-                                    students.Add(new Student(true));
-                                    break;
-                            }
-
-                        break;
-                    default:
-                        Console.WriteLine("Enter A Correct Option!!!");
-                        break;
-                }
-
-                Console.WriteLine(" Welcome To Dynamic Array Student Information Center !!!");
-                while (true)
-                    try
-                    {
-                        Console.Write(" Enter 1 To Display Student Details\n Enter 2 To Delete Student Details\n" +
-                                      " Enter 3 To Update Student Details\n Enter 4 To Display All Student Details\n" +
-                                      " Enter 5 To Add New Student Details\n" +
-                                      " Enter 0 To Exit\n" + " Enter Your Choice: ");
-                        choice = int.Parse(Console.ReadLine() ?? string.Empty);
-                        if (choice >= 0 && choice <= 4) break;
-
-                        Console.WriteLine("Enter A Positive Number");
-                    }
-                    catch (FormatException)
-                    {
-                        Console.WriteLine("Enter A Number!!!");
-                    }
-                    catch (DivideByZeroException)
-                    {
-                        Console.WriteLine("Enter A Number!!!");
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("Enter A Number!!!");
-                    }
-
-                if (choice != 0) continue;
-                Console.WriteLine("Exiting Dynamic Array Student Information Center !!!");
-                break;
-            }
-        }
-
-        public static void Main(string[] args)
-        {
-            try
-            {
-                StaticArrayMainMenu();
-                DynamicArrayMainMenu();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-        }
-
         private enum Campus
         {
             Isb,
@@ -931,5 +493,443 @@ namespace Lab_Assignment_1
                     Console.WriteLine("Student Record Not Found!");
             }
         }
+        private static void StaticArrayMainMenu()
+        {
+            Console.WriteLine("Welcome To Static Array Student Information Center !!!");
+            int studentCount;
+            while (true)
+                try
+                {
+                    Console.Write("Enter The Number Of Student You Want To Add: ");
+                    studentCount = int.Parse(Console.ReadLine() ?? string.Empty);
+                    if (studentCount >= 1) break;
+
+                    Console.WriteLine("Enter A Positive or Non-Zero Number");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+                catch (DivideByZeroException)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+
+            var students = new Student[studentCount];
+            for (var i = 0; i < studentCount; i++)
+            {
+                Console.Write($"Do You Want to Add Details of Student No: {i + 1}?\n Enter YES To Add Details\n" +
+                              " Enter NO To Add Details\n Enter Your Choice: ");
+                var noInfoCheck = Console.ReadLine();
+                if (noInfoCheck != null)
+                    switch (noInfoCheck.ToLower())
+                    {
+                        case "yes":
+                            students[i] = new Student(false);
+                            break;
+                        case "no":
+                            students[i] = new Student(true);
+                            break;
+                        default:
+                            students[i] = new Student(true);
+                            break;
+                    }
+            }
+
+            int choice;
+            Console.WriteLine(" Welcome To Static Array Student Information Center !!!");
+            while (true)
+                try
+                {
+                    Console.Write(" Enter 1 To Display Student Details\n Enter 2 To Delete Student Details\n" +
+                                  " Enter 3 To Update Student Details\n Enter 4 To Display All Student Details\n" +
+                                  " Enter 0 To Exit\n" + " Enter Your Choice: ");
+                    choice = int.Parse(Console.ReadLine() ?? string.Empty);
+                    if (choice >= 0 && choice <= 4) break;
+
+                    Console.WriteLine("Enter A Non-Zero Number");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+                catch (DivideByZeroException)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+
+            if (choice == 0)
+                Console.WriteLine("Exiting Static Array Student Information Center !!!");
+            while (choice != 0)
+            {
+                int index;
+                switch (choice)
+                {
+                    case 1:
+                        while (true)
+                            try
+                            {
+                                Console.Write("Enter Student Index: ");
+                                index = int.Parse(Console.ReadLine() ?? string.Empty);
+                                if (index > 0 && index <= students.Length) break;
+
+                                Console.WriteLine("Enter A Correct Index !!! ");
+                            }
+                            catch (FormatException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (DivideByZeroException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+
+                        Console.WriteLine($"Student No: {index}");
+                        students[index - 1].display_Student_Details();
+                        break;
+                    case 2:
+                        while (true)
+                            try
+                            {
+                                Console.Write("Enter Student Index: ");
+                                index = int.Parse(Console.ReadLine() ?? string.Empty);
+                                if (index > 0 && index <= students.Length) break;
+
+                                Console.WriteLine("Enter A Correct Index !!! ");
+                            }
+                            catch (FormatException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (DivideByZeroException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+
+                        Console.WriteLine($"Student No: {index}");
+                        students[index - 1].delete_Student();
+                        break;
+                    case 3:
+                        while (true)
+                            try
+                            {
+                                Console.Write("Enter Student Index: ");
+                                index = int.Parse(Console.ReadLine() ?? string.Empty);
+                                if (index > 0 && index <= students.Length) break;
+
+                                Console.WriteLine("Enter A Correct Index !!! ");
+                            }
+                            catch (FormatException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (DivideByZeroException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+
+                        Console.WriteLine($"Student No: {index}");
+                        students[index - 1].update_student();
+                        break;
+                    case 4:
+                        for (var i = 0; i < students.Length; i++)
+                        {
+                            Console.WriteLine($"Student No: {i + 1}");
+                            students[i].display_Student_Details();
+                        }
+
+                        break;
+                    default:
+                        Console.WriteLine("Enter A Correct Option!!!");
+                        break;
+                }
+
+                Console.WriteLine(" Welcome To Static Array Student Information Center !!!");
+                while (true)
+                    try
+                    {
+                        Console.Write(" Enter 1 To Display Student Details\n Enter 2 To Delete Student Details\n" +
+                                      " Enter 3 To Update Student Details\n Enter 4 To Display All Student Details\n" +
+                                      " Enter 0 To Exit\n" + " Enter Your Choice: ");
+                        choice = int.Parse(Console.ReadLine() ?? string.Empty);
+                        if (choice >= 0 && choice <= 4) break;
+                        Console.WriteLine("Enter A Non-Zero Number");
+                    }
+                    catch (FormatException)
+                    {
+                        Console.WriteLine("Enter A Number!!!");
+                    }
+                    catch (DivideByZeroException)
+                    {
+                        Console.WriteLine("Enter A Number!!!");
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Enter A Number!!!");
+                    }
+
+                if (choice != 0) continue;
+                Console.WriteLine("Exiting Static Array Student Information Center !!!");
+                break;
+            }
+        }
+
+        private static void DynamicArrayMainMenu()
+        {
+            Console.WriteLine("Welcome To Dynamic Array Student Information Center !!!");
+            int studentCount;
+            while (true)
+                try
+                {
+                    Console.Write("Enter The Number Of Student You Want To Add: ");
+                    studentCount = int.Parse(Console.ReadLine() ?? string.Empty);
+                    if (studentCount >= 1) break;
+                    Console.WriteLine("Enter A Positive or Non-Zero Number");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+                catch (DivideByZeroException)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+
+            var students = new List<Student>();
+            for (var i = 0; i < studentCount; i++)
+            {
+                Console.Write($"Do You Want to Add Details of Student No: {i + 1}?\n Enter YES To Add Details\n" +
+                              " Enter NO To Add Details\n Enter Your Choice: ");
+                var noInfoCheck = Console.ReadLine();
+                if (noInfoCheck != null)
+                    switch (noInfoCheck.ToLower())
+                    {
+                        case "yes":
+                            students.Add(new Student(false));
+                            break;
+                        case "no":
+                            students.Add(new Student(true));
+                            break;
+                        default:
+                            students.Add(new Student(true));
+                            break;
+                    }
+            }
+
+            Console.WriteLine(" Welcome To Dynamic Array Student Information Center !!!");
+            int choice;
+            while (true)
+                try
+                {
+                    Console.Write(" Enter 1 To Display Student Details\n Enter 2 To Delete Student Details\n" +
+                                  " Enter 3 To Update Student Details\n Enter 4 To Display All Student Details\n" +
+                                  " Enter 5 To Add New Student Details\n" +
+                                  " Enter 0 To Exit\n" + " Enter Your Choice: ");
+                    choice = int.Parse(Console.ReadLine() ?? string.Empty);
+                    if (choice >= 0 && choice <= 5) break;
+
+                    Console.WriteLine("Enter A Positive Number");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+                catch (DivideByZeroException)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Enter A Number!!!");
+                }
+
+            if (choice == 0)
+                Console.WriteLine("Exiting Dynamic Array Student Information Center !!!");
+            while (choice != 0)
+            {
+                int index;
+                switch (choice)
+                {
+                    case 1:
+                        while (true)
+                            try
+                            {
+                                Console.Write("Enter Student Index: ");
+                                index = int.Parse(Console.ReadLine() ?? string.Empty);
+                                if (index > 0 && index < students.Count) break;
+
+                                Console.WriteLine("Enter A Correct Index !!! ");
+                            }
+                            catch (FormatException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (DivideByZeroException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+
+                        Console.WriteLine($"Student No: {index}");
+                        students[index - 1].display_Student_Details();
+                        break;
+                    case 2:
+                        while (true)
+                            try
+                            {
+                                Console.Write("Enter Student Index: ");
+                                index = int.Parse(Console.ReadLine() ?? string.Empty);
+                                if (index > 0 && index <= students.Count) break;
+
+                                Console.WriteLine("Enter A Correct Index !!! ");
+                            }
+                            catch (FormatException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (DivideByZeroException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+
+                        Console.WriteLine($"Student No: {index}");
+                        students[index - 1].delete_Student();
+                        break;
+                    case 3:
+                        while (true)
+                            try
+                            {
+                                Console.Write("Enter Student Index: ");
+                                index = int.Parse(Console.ReadLine() ?? string.Empty);
+                                if (index > 0 && index <= students.Count) break;
+
+                                Console.WriteLine("Enter A Correct Index !!! ");
+                            }
+                            catch (FormatException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (DivideByZeroException)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Enter A Number!!!");
+                            }
+
+                        Console.WriteLine($"Student No: {index}");
+                        students[index - 1].update_student();
+                        break;
+                    case 4:
+                        for (var i = 0; i < students.Count; i++)
+                        {
+                            Console.WriteLine($"Student No: {i + 1}");
+                            students[i].display_Student_Details();
+                        }
+
+                        break;
+                    case 5:
+                        Console.Write(
+                            $"Do You Want to Add Details of Student No: {studentCount + 1}?\n Enter YES To Add Details\n" +
+                            " Enter NO To Add Details\n Enter Your Choice: ");
+                        var noInfoCheck = Console.ReadLine();
+                        if (noInfoCheck != null)
+                            switch (noInfoCheck.ToLower())
+                            {
+                                case "yes":
+                                    students.Add(new Student(false));
+                                    break;
+                                case "no":
+                                    students.Add(new Student(true));
+                                    break;
+                                default:
+                                    students.Add(new Student(true));
+                                    break;
+                            }
+
+                        break;
+                    default:
+                        Console.WriteLine("Enter A Correct Option!!!");
+                        break;
+                }
+
+                Console.WriteLine(" Welcome To Dynamic Array Student Information Center !!!");
+                while (true)
+                    try
+                    {
+                        Console.Write(" Enter 1 To Display Student Details\n Enter 2 To Delete Student Details\n" +
+                                      " Enter 3 To Update Student Details\n Enter 4 To Display All Student Details\n" +
+                                      " Enter 5 To Add New Student Details\n" +
+                                      " Enter 0 To Exit\n" + " Enter Your Choice: ");
+                        choice = int.Parse(Console.ReadLine() ?? string.Empty);
+                        if (choice >= 0 && choice <= 4) break;
+
+                        Console.WriteLine("Enter A Positive Number");
+                    }
+                    catch (FormatException)
+                    {
+                        Console.WriteLine("Enter A Number!!!");
+                    }
+                    catch (DivideByZeroException)
+                    {
+                        Console.WriteLine("Enter A Number!!!");
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Enter A Number!!!");
+                    }
+
+                if (choice != 0) continue;
+                Console.WriteLine("Exiting Dynamic Array Student Information Center !!!");
+                break;
+            }
+        }
+
+        public static void Main(string[] args)
+        {
+            try
+            {
+                StaticArrayMainMenu();
+                DynamicArrayMainMenu();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        
     }
 }
