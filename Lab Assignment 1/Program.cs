@@ -93,7 +93,8 @@ namespace Lab_Assignment_1
 
             private void set_Reg_NO()
             {
-                _regNo = "" + _session + _sessionYear + "-" + _courseProgram + "-" + _regNo;
+                var courseProgramString = _courseProgram.ToString();
+                _regNo = "" + _session + _sessionYear + "-"  + courseProgramString.ToUpper() + "-" + _regNo;
             }
 
             private void set_email()
@@ -780,7 +781,7 @@ namespace Lab_Assignment_1
                             {
                                 Console.Write("Enter Student Index: ");
                                 index = int.Parse(Console.ReadLine() ?? string.Empty);
-                                if (index > 0 && index < students.Count) break;
+                                if (index > 0 && index <= students.Count) break;
 
                                 Console.WriteLine("Enter A Correct Index !!! ");
                             }
@@ -799,6 +800,7 @@ namespace Lab_Assignment_1
 
                         Console.WriteLine($"Student No: {index}");
                         students[index - 1].display_Student_Details();
+                        Console.WriteLine(students[index-1]);
                         break;
                     case 2:
                         while (true)
