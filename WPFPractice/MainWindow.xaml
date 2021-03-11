@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPFPractice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPractice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Text="First Number: " VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" Name="TxtFirst"></TextBox>
+        <Button Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="100" Height="20" Click="ButtonBase_OnClick"> Sum</Button>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Second Number: " VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Name="TxtSecond"></TextBox>
+        <Button Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="20" Click="ButtonBase_OnClick"> Subtract</Button>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Output: " VerticalAlignment="Top" HorizontalAlignment="Center" Name="TxtOutput"></TextBlock>
+
+    </Grid>
+</Window>

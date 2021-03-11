@@ -1,0 +1,29 @@
+﻿<Window x:Class="Lab_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Gender:" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
+        <RadioButton Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" HorizontalAlignment="Left" GroupName="Gender" Checked="ToggleButton_OnChecked">Male</RadioButton>
+        <RadioButton Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" GroupName="Gender">Female</RadioButton>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Marital Status:" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <RadioButton Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Left" GroupName="Status">Single</RadioButton>
+        <RadioButton Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" GroupName="Status">Engaged</RadioButton>
+        <RadioButton Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" GroupName="Status">Married</RadioButton>
+
+    </Grid>
+</Window>
