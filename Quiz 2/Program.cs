@@ -6,6 +6,10 @@ namespace Quiz_2
     {
         public static void Main(string[] args)
         {
+            var workItem = new WorkItem();
+            var changeRequest = new ChangeRequest();
+            Console.WriteLine(workItem);
+            Console.WriteLine(changeRequest);
         }
 
         public class WorkItem : object
@@ -17,8 +21,8 @@ namespace Quiz_2
             public WorkItem(int id, string title, TimeSpan jobLength)
             {
                 Id = id;
-                this.Title = title;
-                this.JobLength = jobLength;
+                Title = title;
+                JobLength = jobLength;
             }
 
             public int Id { get; set; }
@@ -26,6 +30,11 @@ namespace Quiz_2
             public string Title { get; set; }
 
             public TimeSpan JobLength { get; set; }
+
+            public override string ToString()
+            {
+                return "I am in Work Item";
+            }
 
             public void Update()
             {
@@ -48,6 +57,11 @@ namespace Quiz_2
             {
                 OriginalItemId = originalItemId;
             }
+
+            /*public override string ToString()
+            {
+                return "I am in Change Request";
+            }*/
 
             public int OriginalItemId { get; set; }
         }
