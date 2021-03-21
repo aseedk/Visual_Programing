@@ -1,0 +1,42 @@
+﻿<Window x:Class="WPFPractice.Calculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WPFPractice"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="300">
+    <Grid Background="DarkSlateGray ">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.ColumnSpan="4" Width="250" Text="0." TextAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></TextBlock>
+        <Button Grid.Row="1" Grid.Column="0" Content="7" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="1" Grid.Column="1" Content="8" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="1" Grid.Column="2" Content="9" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="1" Grid.Column="3" Content="/" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="2" Grid.Column="0" Content="4" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Content="5" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="2" Grid.Column="2" Content="6" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="2" Grid.Column="3" Content="X" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="3" Grid.Column="0" Content="1" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="3" Grid.Column="1" Content="2" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="3" Grid.Column="2" Content="3" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="3" Grid.Column="3" Content="+" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="4" Grid.Column="0" Content="-" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="4" Grid.Column="1" Content="0" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="4" Grid.Column="2" Content="." VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+        <Button Grid.Row="4" Grid.Column="3" Content="=" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkGray" Padding="25"></Button>
+
+    </Grid>
+</Window>
