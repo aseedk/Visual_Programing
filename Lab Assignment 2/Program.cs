@@ -1,4 +1,10 @@
-﻿using System;
+﻿// Name: Aseed Ali Khokhar
+// Reg NO: FA18-BSE-015 
+// Class: BSE 6A
+// Lab Assignment 2 Visual Programming
+// 24th March, 2021
+
+using System;
 using System.Collections.Generic;
 
 namespace Lab_Assignment_2
