@@ -2,11 +2,14 @@
 using System.Windows;
 using System.Windows.Input;
 
-namespace YoutubeDemo
+namespace Quiz3
 {
-    public partial class Video6 : Window
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow
     {
-        public Video6()
+        public MainWindow()
         {
             InitializeComponent();
             DataContext = new ExitCommandContext();
@@ -29,11 +32,12 @@ namespace YoutubeDemo
         {
             public void Execute(object parameter)
             {
+                MessageBox.Show("Wrap Shortcut Key Pressed");
                 foreach (Window window in Application.Current.Windows)
                 {
-                    if (window.GetType() == typeof(Video6))
+                    if (window.GetType() == typeof(MainWindow))
                     {
-                        ((Video6) window).TextBox.TextWrapping = ((Video6) window).TextBox.TextWrapping == TextWrapping.NoWrap ? TextWrapping.Wrap : TextWrapping.NoWrap;
+                        ((MainWindow) window).TextBoxItem.TextWrapping = ((MainWindow) window).TextBoxItem.TextWrapping == TextWrapping.NoWrap ? TextWrapping.Wrap : TextWrapping.NoWrap;
                     }
                 }
             }
@@ -52,9 +56,9 @@ namespace YoutubeDemo
                 MessageBox.Show("Wrap Shortcut Key Pressed");
                 foreach (Window window in Application.Current.Windows)
                 {
-                    if (window.GetType() == typeof(Video6))
+                    if (window.GetType() == typeof(MainWindow))
                     {
-                        ((Video6) window).TextBox.Text += DateTime.Now;
+                        ((MainWindow) window).TextBoxItem.Text += DateTime.Now;
                     }
                 }
             }
@@ -76,10 +80,6 @@ namespace YoutubeDemo
         {
             Application.Current.Shutdown();
         }
-        private void Time(object sender, RoutedEventArgs e)
-        {
-            TextBox.Text += DateTime.Now.ToString();
-        }
 
         private void New_OnCanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
@@ -99,6 +99,11 @@ namespace YoutubeDemo
         private void Open_OnExecuted(object sender, ExecutedRoutedEventArgs e)
         {
             MessageBox.Show("New Menu Item: Open");
+        }
+
+        private void Time(object sender, RoutedEventArgs e)
+        {
+            TextBoxItem.Text += DateTime.Now.ToString();
         }
     }
 }

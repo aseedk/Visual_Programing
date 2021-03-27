@@ -1,0 +1,41 @@
+﻿<Window x:Class="Quiz3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quiz3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.CommandBindings>
+    <CommandBinding Command="New"></CommandBinding>
+    <CommandBinding Command="Open" ></CommandBinding>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="X" Modifiers="Control" Command="{Binding Path = ExitCommand}"></KeyBinding>
+        <KeyBinding Key="W" Modifiers="Control" Command="{Binding Path = WrapCommand}"></KeyBinding>
+    </Window.InputBindings>
+    <Grid>
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="New" Command="New"></MenuItem>
+                <MenuItem Header="NewWindow" Command="New"></MenuItem>
+                <MenuItem Header="Open" ></MenuItem>
+                <MenuItem Header="Save" ></MenuItem>
+                <MenuItem Header="Save As"></MenuItem>
+                <MenuItem Header="Page As"></MenuItem>
+                <MenuItem x:Name="MenuItemExit" Header="Exit" InputGestureText="Ctrl+X"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="Cut" Command="Cut"></MenuItem>
+                <MenuItem Header="Copy" Command="Copy"></MenuItem>
+                <MenuItem Header="Paste" Command="Paste"></MenuItem>
+                <MenuItem x:Name="TimeItem" Header="Time/Date" InputGestureText = "F5"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Format">
+                <MenuItem x:Name="Wrap" Header="Font" InputGestureText = "Ctrl+W"></MenuItem>
+                <MenuItem Header="Font..."></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBox Name="TextBoxItem" VerticalAlignment="Center" TextWrapping="Wrap" ></TextBox>
+    </Grid>
+</Window>

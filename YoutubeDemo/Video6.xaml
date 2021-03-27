@@ -13,12 +13,17 @@
     <Window.InputBindings>
         <KeyBinding Key="X" Modifiers="Control" Command="{Binding Path = ExitCommand}"></KeyBinding>
         <KeyBinding Key="W" Modifiers="Control" Command="{Binding Path = WrapCommand}"></KeyBinding>
+        <KeyBinding Key="F5" Modifiers="Control" Command="{Binding Path = TimeCommand}"></KeyBinding>
     </Window.InputBindings>
     <Grid>
         <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="New" Command="New"></MenuItem>
+                <MenuItem Header="NewWindow" ></MenuItem>
                 <MenuItem Header="Open" Command="Open" ></MenuItem>
+                <MenuItem Header="Save" ></MenuItem>
+                <MenuItem Header="Save As" ></MenuItem>
+                <MenuItem Header="Page As" ></MenuItem>
                 <Separator HorizontalAlignment="Left" Height="1"></Separator>
                 <MenuItem x:Name="MenuItemExit" Header="Exit" InputGestureText="Ctrl+X" Click="Exit"></MenuItem>
             </MenuItem>
@@ -26,9 +31,11 @@
                 <MenuItem Header="Cut" Command="Cut"></MenuItem>
                 <MenuItem Header="Copy" Command="Copy"></MenuItem>
                 <MenuItem Header="Paste" Command="Paste"></MenuItem>
+                <MenuItem x:Name="TimeItem" Header="Time/Date" InputGestureText = "F5" Click="Time"></MenuItem>
             </MenuItem>
             <MenuItem Header="_Format">
-                <MenuItem Command="{Binding Path =WrapCommand}" InputGestureText = "Ctrl+W" Header="Wrap" IsCheckable="True" IsChecked="True"></MenuItem>
+                <MenuItem Command="{Binding Path =WrapCommand}" InputGestureText = "Ctrl+W" Header="Wrap" IsCheckable="True" IsChecked="True" ></MenuItem>
+                <MenuItem Header="Font..."></MenuItem>
             </MenuItem>
         </Menu>
         <TextBox x:Name="TextBox" VerticalAlignment="Center" TextWrapping="Wrap" ></TextBox>
