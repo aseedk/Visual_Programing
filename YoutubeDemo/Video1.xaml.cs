@@ -5,7 +5,7 @@ namespace YoutubeDemo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Video1
+    public partial class Video1: Window
     {
         public Video1()
         {

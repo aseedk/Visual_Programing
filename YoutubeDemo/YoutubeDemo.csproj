@@ -62,6 +62,9 @@
         <Compile Include="Video5.xaml.cs">
           <DependentUpon>Video5.xaml</DependentUpon>
         </Compile>
+        <Compile Include="Video6.xaml.cs">
+          <DependentUpon>Video6.xaml</DependentUpon>
+        </Compile>
         <Page Include="Video1.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
@@ -78,6 +81,7 @@
         <Page Include="Video3.xaml" />
         <Page Include="Video4.xaml" />
         <Page Include="Video5.xaml" />
+        <Page Include="Video6.xaml" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs">

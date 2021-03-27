@@ -7,6 +7,72 @@
         mc:Ignorable="d"
         Title="Video5" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" Grid.Column="0"
+                Background="Coral">
+            <Button Content="Button"></Button>
+        </Canvas>
+        <Grid Grid.Row="0" Grid.Column="1" Background="Blue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Content="Button"></Button>
+        </Grid>
+        <WrapPanel Grid.Row="0" Grid.Column="2" Background="Lime">
+            <Button Content="Button"></Button>
+            <Button Content="Button"></Button>
+            <Button Content="Button"></Button>
+        </WrapPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="Firebrick">
+            <Button Content="Button"></Button>
+            <Button Content="Button"></Button>
+            <Button Content="Button"></Button>
+        </StackPanel>
+        <DockPanel Grid.Row="1" Grid.Column="1" Background="Indigo" LastChildFill="False">
+            <Button Content="Button" DockPanel.Dock="Top"></Button>
+            <Button Content="Button" DockPanel.Dock="Bottom" VerticalAlignment="Top"></Button>
+            <Button Content="Button" DockPanel.Dock="Right"></Button>
+            <Button Content="Button" DockPanel.Dock="Left"></Button>
+        </DockPanel>
+        <Expander Header="Profile Information" Grid.Row="1" Grid.Column="2" Background="Chocolate" ExpandDirection="Down">
+            <Grid Background="Purple"> 
+                <Label Content="Button"></Label>
+                <Label Content="Button"></Label>
+                <Label Content="Button"></Label>
+            </Grid>
+        </Expander>
+        <TabControl Grid.Row="2" Grid.Column="0">
+            <TabItem Header="Tab1">
+                <Grid></Grid>
+            </TabItem>
+            <TabItem Header="Tab2">
+                <Grid></Grid>
+            </TabItem>
+        </TabControl>
+        <GroupBox Grid.Row="2" Grid.Column="1" Header="Gender">
+            <Grid>
+                <RadioButton Content="Male"></RadioButton>
+                <RadioButton Content="Female" VerticalAlignment="Bottom"></RadioButton>
+            </Grid>
+        </GroupBox>
+        <ScrollViewer Grid.Row="2" Grid.Column="2">
+            <Button Content="Button"></Button>
+        </ScrollViewer>
     </Grid>
 </Window>
