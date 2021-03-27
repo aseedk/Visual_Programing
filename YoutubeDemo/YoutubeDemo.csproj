@@ -53,6 +53,15 @@
         <Compile Include="Video2.xaml.cs">
           <DependentUpon>Video2.xaml</DependentUpon>
         </Compile>
+        <Compile Include="Video3.xaml.cs">
+          <DependentUpon>Video3.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Video4.xaml.cs">
+          <DependentUpon>Video4.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Video5.xaml.cs">
+          <DependentUpon>Video5.xaml</DependentUpon>
+        </Compile>
         <Page Include="Video1.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
@@ -66,6 +75,9 @@
             <SubType>Code</SubType>
         </Compile>
         <Page Include="Video2.xaml" />
+        <Page Include="Video3.xaml" />
+        <Page Include="Video4.xaml" />
+        <Page Include="Video5.xaml" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs">
@@ -83,6 +95,11 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Resource Include="img\PeepoHappy.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
