@@ -50,6 +50,9 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </ApplicationDefinition>
+        <Compile Include="Video2.xaml.cs">
+          <DependentUpon>Video2.xaml</DependentUpon>
+        </Compile>
         <Page Include="Video1.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
@@ -62,6 +65,7 @@
             <DependentUpon>Video1.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Page Include="Video2.xaml" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs">
