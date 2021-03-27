@@ -1,0 +1,29 @@
+﻿<Window x:Class="Exam.Practice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Practice" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="20*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <RadioButton Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Name="Random" GroupName="radioCheck">Random</RadioButton>
+            <RadioButton Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Name="Sequential" GroupName="radioCheck">Sequential</RadioButton>
+        </Grid>
+        <StackPanel Grid.Row="1" HorizontalAlignment= "Center" Orientation="Horizontal" Margin="10">
+            <Button ><Image Source="/img/1.jpg" Margin="10" Opacity="0.2" Name="Image1"></Image></Button>
+            <Button ><Image Source="/img/2.jpg" Margin="10" Opacity="0.3" Name="Image2"></Image></Button>
+            <Button ><Image Source="/img/3.jpg" Margin="10" Opacity="0.5" Name="Image3"></Image></Button>
+        </StackPanel>
+        <Button Grid.Row="2" Click="ButtonBase_OnClick" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="50" Name="Refresh">Refresh</Button>
+    </Grid>
+</Window>
