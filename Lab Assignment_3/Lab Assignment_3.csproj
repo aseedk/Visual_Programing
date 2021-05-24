@@ -4,10 +4,10 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{B9B4D210-BF57-4B16-89FB-9757216481D4}</ProjectGuid>
+        <ProjectGuid>{F5887DF5-75C0-4E09-ABCE-BACDDA3944BD}</ProjectGuid>
         <OutputType>WinExe</OutputType>
-        <RootNamespace>YoutubeDemo</RootNamespace>
-        <AssemblyName>YoutubeDemo</AssemblyName>
+        <RootNamespace>Lab_Assignment_3</RootNamespace>
+        <AssemblyName>Lab_Assignment_3</AssemblyName>
         <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,25 +50,10 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </ApplicationDefinition>
-        <Compile Include="Video2.xaml.cs">
-          <DependentUpon>Video2.xaml</DependentUpon>
+        <Compile Include="Waleed.xaml.cs">
+          <DependentUpon>Waleed.xaml</DependentUpon>
         </Compile>
-        <Compile Include="Video3.xaml.cs">
-          <DependentUpon>Video3.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Video4.xaml.cs">
-          <DependentUpon>Video4.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Video5.xaml.cs">
-          <DependentUpon>Video5.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Video6.xaml.cs">
-          <DependentUpon>Video6.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Video7.xaml.cs">
-          <DependentUpon>Video7.xaml</DependentUpon>
-        </Compile>
-        <Page Include="Video1.xaml">
+        <Page Include="MainWindow.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </Page>
@@ -76,16 +61,11 @@
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
-        <Compile Include="Video1.xaml.cs">
-            <DependentUpon>Video1.xaml</DependentUpon>
+        <Compile Include="MainWindow.xaml.cs">
+            <DependentUpon>MainWindow.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
-        <Page Include="Video2.xaml" />
-        <Page Include="Video3.xaml" />
-        <Page Include="Video4.xaml" />
-        <Page Include="Video5.xaml" />
-        <Page Include="Video6.xaml" />
-        <Page Include="Video7.xaml" />
+        <Page Include="Waleed.xaml" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs">
@@ -105,9 +85,7 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
-      <Resource Include="img\PeepoHappy.jpg">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Resource>
+      <Content Include="test.txt" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

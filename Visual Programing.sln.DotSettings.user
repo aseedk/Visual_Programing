@@ -1,5 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=A76FD1A0_002D4B2E_002D476E_002DAD16_002D220C9A2E4A2D_002Ff_003APractice_002Examl_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\dotnet\sdk\5.0.103\MSBuild.dll</s:String>
+	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1048576</s:Int64>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Lab_00205_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=WPFPractice_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>

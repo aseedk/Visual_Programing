@@ -28,7 +28,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab9", "Lab9\Lab9.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeDemo", "YoutubeDemo\YoutubeDemo.csproj", "{B9B4D210-BF57-4B16-89FB-9757216481D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab Assignment 3", "Lab Assignment 3\Lab Assignment 3.csproj", "{B39AEE5E-2B93-4F51-91A3-37110DA048E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class Assignment 3", "Class Assignment 3\Class Assignment 3.csproj", "{B39AEE5E-2B93-4F51-91A3-37110DA048E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab Assignment_3", "Lab Assignment_3\Lab Assignment_3.csproj", "{F5887DF5-75C0-4E09-ABCE-BACDDA3944BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab Sessional 2", "Lab Sessional 2\Lab Sessional 2.csproj", "{D1E951B0-F91C-4658-9B50-624F6DD256CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class Sessional_2", "Class Sessional_2\Class Sessional_2.csproj", "{E285709E-67D5-428A-AD33-A65146B235A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBTest", "MongoDBTest\MongoDBTest.csproj", "{22515BB5-9A54-4AEA-BD51-2DF80F0F2379}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,5 +104,21 @@ Global
 		{B39AEE5E-2B93-4F51-91A3-37110DA048E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B39AEE5E-2B93-4F51-91A3-37110DA048E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B39AEE5E-2B93-4F51-91A3-37110DA048E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5887DF5-75C0-4E09-ABCE-BACDDA3944BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5887DF5-75C0-4E09-ABCE-BACDDA3944BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5887DF5-75C0-4E09-ABCE-BACDDA3944BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5887DF5-75C0-4E09-ABCE-BACDDA3944BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1E951B0-F91C-4658-9B50-624F6DD256CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E951B0-F91C-4658-9B50-624F6DD256CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E951B0-F91C-4658-9B50-624F6DD256CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E951B0-F91C-4658-9B50-624F6DD256CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E285709E-67D5-428A-AD33-A65146B235A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E285709E-67D5-428A-AD33-A65146B235A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E285709E-67D5-428A-AD33-A65146B235A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E285709E-67D5-428A-AD33-A65146B235A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22515BB5-9A54-4AEA-BD51-2DF80F0F2379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22515BB5-9A54-4AEA-BD51-2DF80F0F2379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22515BB5-9A54-4AEA-BD51-2DF80F0F2379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22515BB5-9A54-4AEA-BD51-2DF80F0F2379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

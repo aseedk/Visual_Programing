@@ -1,11 +1,11 @@
-﻿<Window x:Class="YoutubeDemo.Video6"
+﻿<Window x:Class="Quiz_3.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:YoutubeDemo"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quiz_3"
         mc:Ignorable="d"
-        Title="Video6" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="525">
     <Window.CommandBindings>
         <CommandBinding Command="New" CanExecute="New_OnCanExecute" Executed="New_OnExecuted"></CommandBinding>
         <CommandBinding Command="Open" CanExecute="Open_OnCanExecute" Executed="Open_OnExecuted"></CommandBinding>
@@ -20,7 +20,7 @@
             <MenuItem Header="_File">
                 <MenuItem Header="New" Command="New"></MenuItem>
                 <MenuItem Header="NewWindow" ></MenuItem>
-                <MenuItem Header="Open" Command="Copy" ></MenuItem>
+                <MenuItem Header="Open" Command="Open" ></MenuItem>
                 <MenuItem Header="Save" ></MenuItem>
                 <MenuItem Header="Save As" ></MenuItem>
                 <MenuItem Header="Page As" ></MenuItem>

@@ -1,4 +1,4 @@
-﻿namespace Lab_Assignment_3
+﻿namespace Class_Sessional_2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
