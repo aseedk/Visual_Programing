@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Quiz7.MvcApplication" Language="C#" %>
